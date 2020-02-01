@@ -1,0 +1,18 @@
+app:
+  name: presto
+
+aws:
+  region: us-east-1
+  accountId: '220919409617'
+  ecr:
+    repository: presto-demo
+
+coordinator:
+  replicas: 2
+
+service:
+  https:
+    port: 443
+  http:
+    port: 80
+  targetPort: 8080

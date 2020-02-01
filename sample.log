@@ -1,0 +1,219 @@
+christopherharris:/tmp$ git clone git@github.com:cnharris10/presto-demo.git /tmp/presto-demo && ruby /tmp/presto-demo/build.rb
+Cloning into '/tmp/presto-demo'...
+remote: Enumerating objects: 38, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 38 (delta 17), reused 31 (delta 10), pack-reused 0
+Receiving objects: 100% (38/38), 6.42 KiB | 6.42 MiB/s, done.
+Resolving deltas: 100% (17/17), done.
+Which version do you want to run? (323-e.4, 323-e.3, 323-e.2, 323-e.1)
+
+Invalid version given, deploying Presto version: 323-e.4
+Pulling presto Dockerfile
+--2020-02-02 14:14:28--  https://github.com/starburstdata/docker-images/archive/master.zip
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/starburstdata/docker-images/zip/master [following]
+--2020-02-02 14:14:28--  https://codeload.github.com/starburstdata/docker-images/zip/master
+Resolving codeload.github.com (codeload.github.com)... 192.30.253.120
+Connecting to codeload.github.com (codeload.github.com)|192.30.253.120|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘/tmp/presto-demo/build/master.zip’
+
+master.zip                        [    <=>                                         ]   3.56M  4.46MB/s    in 0.8s
+
+2020-02-02 14:14:29 (4.46 MB/s) - ‘/tmp/presto-demo/build/master.zip’ saved [3731528]
+
+/tmp/presto-demo/build: Scheme missing.
+FINISHED --2020-02-02 14:14:29--
+Total wall clock time: 1.2s
+Downloaded: 1 files, 3.6M in 0.8s (4.46 MB/s)
+
+Archive:  /tmp/presto-demo/build/master.zip
+198f721b4720befccc9fe1a96281dde3eabc7cd0
+   creating: /tmp/presto-demo/build/docker-images-master/
+  inflating: /tmp/presto-demo/build/docker-images-master/.gitignore
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/README.md
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/docker-compose.yml
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/hive/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/hive/conf/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/hive/conf/hive-site.xml
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/presto/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/presto/catalog/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/presto/catalog/hive.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/presto/catalog/mysql.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/etc/presto/catalog/postgresql.properties
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/bin/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/bin/start-hive-metastore.sh
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/mysql/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/mysql/001-hive-schema-1.2.1000.mysql.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/mysql/002-hive-txn-schema-1.2.1000.mysql.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/mysql/003-version.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/mysql/004-notification-log.sql
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/postgres/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/postgres/001-hive-schema-1.2.1000.postgres.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/postgres/002-hive-txn-schema-1.2.1000.postgres.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/postgres/003-version.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/opt/sql/postgres/004-notification-log.sql
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/usr/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/usr/local/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/usr/local/bin/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/files/usr/local/bin/hive-cli
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/lib/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/lib/aws-java-sdk-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/lib/aws-java-sdk-core-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/lib/aws-java-sdk-kms-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore-unsecured/lib/aws-java-sdk-s3-1.11.234.jar
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/README.md
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/docker-compose.yml
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/hive/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/hive/conf/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/hive/conf/core-site.xml
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/hive/conf/hive-site.xml
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/presto/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/presto/catalog/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/presto/catalog/hive.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/presto/catalog/mysql.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/etc/presto/catalog/postgresql.properties
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/bin/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/bin/start-hive-metastore.sh
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/mysql/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/mysql/001-hive-schema-1.2.1000.mysql.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/mysql/002-hive-txn-schema-1.2.1000.mysql.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/mysql/003-version.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/mysql/004-notification-log.sql
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/postgres/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/postgres/001-hive-schema-1.2.1000.postgres.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/postgres/002-hive-txn-schema-1.2.1000.postgres.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/postgres/003-version.sql
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/opt/sql/postgres/004-notification-log.sql
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/usr/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/usr/local/
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/usr/local/bin/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/files/usr/local/bin/hive-cli
+   creating: /tmp/presto-demo/build/docker-images-master/hive-metastore/lib/
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/lib/aws-java-sdk-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/lib/aws-java-sdk-core-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/lib/aws-java-sdk-kms-1.11.234.jar
+  inflating: /tmp/presto-demo/build/docker-images-master/hive-metastore/lib/aws-java-sdk-s3-1.11.234.jar
+   creating: /tmp/presto-demo/build/docker-images-master/presto-benchto-driver/
+  inflating: /tmp/presto-demo/build/docker-images-master/presto-benchto-driver/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/presto-benchto-driver/application-default.yaml
+ extracting: /tmp/presto-demo/build/docker-images-master/presto-benchto-driver/overrides-default.yaml
+   creating: /tmp/presto-demo/build/docker-images-master/presto/
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/README.md
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/build-image.sh
+   creating: /tmp/presto-demo/build/docker-images-master/presto/etc/
+   creating: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/
+ extracting: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/blackhole.properties
+ extracting: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/jmx.properties
+ extracting: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/memory.properties
+ extracting: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/tpcds.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/etc/catalog/tpch.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/etc/config.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/etc/jvm.config
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/etc/log.properties
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/incremental.Dockerfile
+   creating: /tmp/presto-demo/build/docker-images-master/presto/installdir/
+ extracting: /tmp/presto-demo/build/docker-images-master/presto/installdir/README
+  inflating: /tmp/presto-demo/build/docker-images-master/presto/installdir/find-dist-location.sh
+   creating: /tmp/presto-demo/build/docker-images-master/salt-master/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-master/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-master/README.md
+   creating: /tmp/presto-demo/build/docker-images-master/salt-master/files/
+   creating: /tmp/presto-demo/build/docker-images-master/salt-master/files/etc/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-master/files/etc/supervisord.conf
+   creating: /tmp/presto-demo/build/docker-images-master/salt-master/files/etc/supervisord.d/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-master/files/etc/supervisord.d/salt-api.conf
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-master/files/etc/supervisord.d/salt-master.conf
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/Dockerfile
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/README.md
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/docker/
+ extracting: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/docker/daemon.json
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/supervisord.conf
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/supervisord.d/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/supervisord.d/docker.conf
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/etc/supervisord.d/salt-minion.conf
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/usr/
+   creating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/usr/bin/
+  inflating: /tmp/presto-demo/build/docker-images-master/salt-minion-centos/files/usr/bin/systemctl
+   creating: /tmp/presto-demo/build/docker-images-master/squid/
+  inflating: /tmp/presto-demo/build/docker-images-master/squid/Dockerfile
+Building image: 220919409617.dkr.ecr.us-east-1.amazonaws.com/presto-demo:v323-e4a
+Sending build context to Docker daemon   21.5kB
+Step 1/9 : FROM centos:7.5.1804
+ ---> cf49811e3cdb
+Step 2/9 : LABEL maintainer="https://www.starburstdata.com/"
+ ---> Using cache
+ ---> 5b8db0295019
+Step 3/9 : ARG presto_version=323-e.4
+ ---> Using cache
+ ---> 9c405a3473ab
+Step 4/9 : ARG dist_location=""
+ ---> Using cache
+ ---> 727d5eca1fa8
+Step 5/9 : RUN yum -y install java-11-openjdk less &&     yum clean all &&     rm -rf /var/cache/yum &&     echo OK
+ ---> Using cache
+ ---> 4e2a40aedba3
+Step 6/9 : COPY ./installdir /installdir
+ ---> Using cache
+ ---> e36a1ba19c24
+Step 7/9 : RUN set -xeu &&     dist="$(/installdir/find-dist-location.sh "${dist_location}" "${presto_version}")" &&     yum -y localinstall "${dist}/presto-server-rpm-${presto_version}.x86_64.rpm" &&     rpm -qa | grep -q presto-server &&     cli_location="${dist}/presto-cli-${presto_version}-executable.jar" &&     if test -f "${cli_location}"; then         cp -a "${cli_location}" /usr/local/bin/presto-cli;     else         curl -fsSL "${cli_location}" -o /usr/local/bin/presto-cli;     fi &&     chmod -v +x /usr/local/bin/presto-cli &&     ln -vs /usr/local/bin/presto-cli / `# backwards compatibility ` &&     yum clean all &&     rm -vr /var/tmp &&     rm -vr /installdir &&     echo OK
+ ---> Using cache
+ ---> 834c8497b5c1
+Step 8/9 : COPY etc /usr/lib/presto/etc
+ ---> Using cache
+ ---> 1c2bc562d99c
+Step 9/9 : CMD /usr/lib/presto/bin/launcher run
+ ---> Using cache
+ ---> 3b555c53078e
+Successfully built 3b555c53078e
+Successfully tagged 220919409617.dkr.ecr.us-east-1.amazonaws.com/presto-demo:v323-e4a
+Acquiring docker login credentials
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Login Succeeded
+Pushing image to ECR: 220919409617.dkr.ecr.us-east-1.amazonaws.com/presto-demo:v323-e4a
+The push refers to repository [220919409617.dkr.ecr.us-east-1.amazonaws.com/presto-demo]
+355fa265ed75: Preparing
+d7fef44304ac: Preparing
+d73deebae32c: Preparing
+581c87b8b15d: Preparing
+4826cdadf1ef: Preparing
+d73deebae32c: Layer already exists
+d7fef44304ac: Layer already exists
+355fa265ed75: Layer already exists
+4826cdadf1ef: Layer already exists
+581c87b8b15d: Layer already exists
+v323-e4a: digest: sha256:e6b9b05f0f5d62a41b9ea44f4895b6d8911454c6f72548702f8b3495eff37dc3 size: 1369
+Set current context
+Get ecr token
+Registering ECR token as Secret
+secret "ecr-secret-token" deleted
+secret/ecr-secret-token created
+Deploying presto v323-e4a
+Release "presto" has been upgraded. Happy Helming!
+NAME: presto
+LAST DEPLOYED: Sun Feb  2 14:14:37 2020
+NAMESPACE: default
+STATUS: deployed
+REVISION: 17
+TEST SUITE: None
+Deleting local artifacts: /tmp/presto-demo

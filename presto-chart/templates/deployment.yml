@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: {{.Values.app.name}}-deployment
+  namespace: default
+spec:
+  replicas: {{.Values.coordinator.replicas}}
+  selector:
+    matchLabels:
+      app: {{.Values.app.name}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.app.name}}
+    spec:                                                
+      containers:
+        - name: {{.Values.app.name}}
+          image: {{.Values.aws.accountId}}.dkr.ecr.{{.Values.aws.region}}.amazonaws.com/{{.Values.aws.ecr.repository}}:{{.Values.aws.ecr.identifier}}
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - /etc/presto/config.properties
+            initialDelaySeconds: 300
+            periodSeconds: 10
+      imagePullSecrets:
+      - name: ecr-secret-token
