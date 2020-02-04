@@ -2,6 +2,8 @@
 
 ![Presto Server running TPC-H queries](https://i.imgur.com/6AH0Bdv.jpg)
 
+## Public URL
+`http://a4198d97a45f011ea90cc162ea19c1da-be53022f08b9b5dc.elb.us-east-1.amazonaws.com`
 
 ## Running build script
 ```
